@@ -1,7 +1,7 @@
 library(shiny)
 
 ui <- fluidPage(
-  fileInput("file1","Upload your CSV (WARNING: Please clear number format) here: "),
+  fileInput("file1","Upload your CSV file (WARNING: Please clear number format) here: ", accept = ".csv"),
   numericInput("tfactor", "Enter desired tail factor: ",value = 1.0),
   textOutput("cumtri"),
   tableOutput("table1"),
